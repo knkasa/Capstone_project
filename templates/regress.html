@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Skeleton application demoing Heroku and Flask integration.">
+    <meta name="author" content="@gotoariel">   -->
+	<meta name="author" content="home"> 
+	<title> Logistic regression </title>
+	<style>
+   p { display: block;
+    margin-left: 20em;
+    margin-right: 20em; 
+	vertical-align: middle; }
+    </style>
+</head>
+
+
+
+<body bgcolor="white">
+	
+	<div id="menu" align="center" >
+         <a href="/home">  Home   </a>  | 
+		 <a href="/visual">  Visual   </a>  | 
+		 <a href="/neural">  Neural   </a>  |
+		 <a href="/tree">  Tree   </a> 
+    </div>
+	
+	
+	
+	<div style="color:black" align="center">
+	<h2> Logistic regression </h2>
+	</div>
+	
+	<p>  The results for the logistic linear regression is
+	shown. Here, the sigmoid function is used to fit the 
+	data.  As shown in histograms, not all independent variables
+	play important roles. Some of those variables are redundent and
+	can be excluded from the model. Here, we determined 
+	 such variables using <b> Elimination 
+	 method </b> and looking at its p-values. We throw out 
+	 variables that have p-value greater than the threshold
+	 ~0.2.  The table shown below 
+	 shows the variables that are included in the model.	 </p> 
+	
+	
+	<table border = 1 align="center">
+		    <tr>
+               <th> Variable name </th>
+               <th>  Coefficient </th>
+            </tr> 
+            <tr>
+               <td> Credit score </td>
+               <td>  -0.08 </td>
+            </tr> 
+			 <tr>
+               <td> Age </td>
+               <td> 1.08 </td>
+            </tr> 
+			 <tr>
+               <td> Balance </td>
+               <td>  0.21 </td>
+            </tr> 
+			 <tr>
+               <td> Is active member </td>
+               <td>  -0.65 </td>
+            </tr> 
+			 <tr>
+               <td> Live in Germany </td>
+               <td>   0.49 </td>
+			    <tr>
+               <td> Male </td>
+               <td>  -0.34 </td>
+            </tr> 
+            </tr> 
+     </table>
+	 
+	<p>
+	After normalizing each variables, we may determine
+	which varibles play an important role by looking the 
+	coefficients (coefficients that appear in the fitting 
+	function).  Here, the positive coefficients mean these variables make 
+	customers leave the bank. One can see 
+	&quot;Age&quot; plays the most important role. Another word,
+	older generation tend to leave the bank. while &quot;Active 
+	Member&quot; and &quot;Geography&quot;  also play some 
+	role in making customers leave. 
+	</p>
+	 
+	
+	<!-- </div>
+    </div>
+    </div>  -->
+	
+	
+</body>
+</html>
+

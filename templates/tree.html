@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Skeleton application demoing Heroku and Flask integration.">
+    <meta name="author" content="@gotoariel">   -->
+	<meta name="author" content="home"> 
+	<title> Logistic regression </title>
+	<style>
+   p { display: block;
+    margin-left: 20em;
+    margin-right: 20em; 
+	vertical-align: middle; }
+    </style>
+</head>
+
+
+
+<body bgcolor="white">
+	
+	<div id="menu" align="center" >
+         <a href="/home">  Home   </a>  | 
+		 <a href="/visual">  Visual   </a>  | 
+		 <a href="/regress">  Regression   </a>  |
+		  <a href="/neural">  Neural   </a>
+    </div>
+	
+	
+	
+	<div style="color:black" align="center">
+	<h2> Classification Decision Tree </h2>
+	</div>
+	
+	<p>  Here, the decision tree is used to identify
+		which variable has the most impact in making customers 
+		exit.  Below is the tree chart  for the current 
+		dataset.  </p> 
+	
+	<center>
+	 <img src="/image/tree.png" alt="error" />
+	</center>
+	
+	<p>
+	After the tree chart is constructed, one can estimate
+	 the impact power for  each of the variables by summing
+	 changes in the mean squared error and dividing the 
+	 sum by the number of branch nodes.  Below shows the 
+	 normalized impact power for the decision tree and
+	 compared to the regression model.
+	</p>
+	 
+	<center> 
+	 <img src="/image/power.png" alt="error" />
+	</center>
+	
+	<p>
+	It can be seen that two different models yielded different
+	conclusions.  Both models concluded &quot;Age&quot; has
+	the most impact while the regression predicted
+	&quot;Active Member&quot; to be the 2nd most impactful variable
+	; on the other hand, the decision tree 
+	predicted &quot;Number of product&quot; to be the 2nd most
+	impactful variable.  A proper analysis is often needed to 
+	determine which model is most suited for the particular
+	dataset.  In this case, the regression model did not predict
+	&quot;Number of product&quot; has higher impact than other
+	variables.  
+	</p>
+	
+	<!-- </div>
+    </div>
+    </div>  -->
+	
+	
+</body>
+</html>
+

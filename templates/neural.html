@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Skeleton application demoing Heroku and Flask integration.">
+    <meta name="author" content="@gotoariel">   -->
+	<meta name="author" content="home"> 
+	<title> Neural network </title>
+	<style>
+   p { display: block;
+    margin-left: 20em;
+    margin-right: 20em;  }
+	.center {
+  text-align: center;
+  list-style-position: inside;
+   vertical-align: middle;  }
+    </style>
+</head>
+
+<body bgcolor="white">
+	
+	<div id="menu" align="center" >
+         <a href="/home">  Home   </a>  | 
+		 <a href="/visual">  Visual   </a>  |
+		 <a href="/regress">  Regression   </a>  |
+		 <a href="/tree">  Tree   </a>
+    </div>
+	
+
+	
+	<div style="color:black" align="center" >
+	<h2> Neural network </h2>
+	</div>
+	
+	<p> 
+	For the neural network, Levenberg–Marquardt function 
+	and 2 layers with 10 neuralns are used for 
+	the training.  The confusion matrix for the regression/neural network is 
+	shown below. Overall, the neural network performed slightly
+	better.  The prediction ratio (a ratio the model correctly
+	predicted) is <b>80.7%</b> for the reggresion and 
+	<b>86.9%</b> for the neural network.  The neural network
+	assumed 12.8% of customers would exit the bank whereas 
+	the regression model assumed only 3.9% would exit the bank.  The 
+	The actual percentage that customers left the bank is 20.4%.
+	So, both models were underpredicting; particulary the 
+	regression model was shy in predicting the exited customers.
+	Another word, regression model
+	predicts most customers would stay in the bank.  
+	</p> 
+	
+	<center>
+	<img src="/image/confusion.png" alt="error" />
+	</center>
+	
+	<p>  
+	The regression model let users easily see which variables
+	have the biggest impact. This can
+	be done by simply comparing its coefficients in the fitting 
+	function. However, the neural network has no such coefficients since
+	there is no fitting function to begin with.  For the 
+	neural network, we determine such variables by comparing
+	the change in  <i>R</i> value.  Below is the list of variables
+	that are found to be important.
+ 	</p>
+	
+	
+	<ol  class="center"  >
+		<li>Age</li>
+		<li><b>Number of product</b></li>
+		<li>Active member</li>
+		<li>Germany</li>
+		<li>Gender</li>
+		<li>Balance</li>
+		<li>Credit score</li>
+	</ol> 
+	
+	
+	<p>
+	We see the biggest change in <i>R</i> value when we 
+	include/exclude &quot;Age&quot; in the model indicating 
+	Age plays an important role, the  same conclusion arrived in the 
+	regression model.  The difference is the current neural
+	network includes &quot;Number of product&quot; as the 
+	second biggest factor where as the regression model did not include
+	this variable.  We tested the regression model again
+	with &quot;Number of product&quot; included, though it 
+	did not improve the result showing its non-linear behavior 
+	that regession model could not fit.  
+	</p>
+	
+	
+	<!-- </div>
+    </div>
+    </div>  -->
+	
+	
+</body>
+</html>
+
